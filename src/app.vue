@@ -59,6 +59,6 @@
         padding: 0 5px;
     }
 .mui-content>.mui-table-view:first-child{
-    margin-top: 0px;
+    margin-top: 10px;
 }
 </style>

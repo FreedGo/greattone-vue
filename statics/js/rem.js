@@ -35,25 +35,3 @@ window.onload=function(){
 
 
 		}
-
-
-// jq
-	$(function() {
-		// 论坛内页中用于头像宽高的设置
-			var headW;
-			$(window).resize(function(event) {
-				headW=$('.headImg').width();
-				$('.headImg').css('heght', headW);
-				
-			});
-
-		// 论坛内页中用于头像宽高的设置-完成
-		// 替换图片连接
-		var iSrc;
-		iSrc=$('.content img').attr('src');
-			// alert(iSrc);
-		// iSrc[0].replace('\"','');
-		// // console.log(iSrc[0]);
-		// $('.content img').attr('src', iSrc);
-	});
-// jq

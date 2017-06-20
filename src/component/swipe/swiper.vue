@@ -37,11 +37,9 @@ export  default {
 		height: auto;
 		display: block;
 	}
-	.mint-swipe-items-wrap>div{
-		height:auto;
-	}
+
 	.mint-swipe-items-wrap{
-		height: 161px;
+		height: 3.4rem;
 	}
 	.swipe-link{
 		display: block;
