@@ -8,20 +8,37 @@
 		<div class="page-tab-container">
 			<mt-tab-container class="page-tabbar-tab-container" v-model="active" swipeable>
 				<mt-tab-container-item id="tab-container1">
-					<mt-cell v-for="n in list">
-						{{n.title}}
-					</mt-cell>
-					<ul class="list">
-						<li class="list-item" v-for="n in list">
-							<div class="user-info">
-								<div class="titlepic">
-									<a :href="'/e/space/?userid=7610'+n.id">
-										<img :src="n.userinfo.userpic" :alt="n.username">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media" v-for="n in list">
+							<a :href="'/e/space/?userid=7610'+n.id">
+								<img class="mui-media-object mui-pull-left" :src="n.userinfo.userpic" :alt="n.username">
+								<div class="mui-media-body">
+									{{n.username}}
+									<p class='mui-ellipsis'>{{n.userinfo.groupname}} | {{n.userinfo.level.name}} | {{n.newstime}} </p>
+								</div>
+							</a>
+							<div class="mui-card">
+								<!--页眉，放置标题-->
+								<div class="mui-card-header">
+									<div class="mui-media-body" v-if="">
+										{{n.title}}
+										<p>{{n.smalltext}}</p>
+									</div>
+								</div>
+								<!--内容区-->
+								<div class="mui-card-content">
+									<a :href="n.titleurl">
+										<img class="content-titlepic"  :src="n.titlepic" :alt="n.title">
+										<span class="video-pl"></span>
 									</a>
 								</div>
-							</div>
-							<div class="tie-info">
-								<h3>{{n.username}}</h3><h3>{{n.userinfo.groupname}}</h3><h3>{{n.userinfo.level.name}}</h3>
+								<!--页脚，放置补充信息或支持的操作-->
+								<div class="mui-card-footer">
+									<span class="mui-card-link">点击量：{{n.onclick}}</span>
+									<span class="mui-card-link ">评论:{{n.plnum}}</span>
+									<!--<span class="mui-card-link">点赞：{{n.onclick}}</span>-->
+									<span class="mui-card-link  mui-icon mui-icon-redo"></span>
+								</div>
 							</div>
 						</li>
 					</ul>
@@ -43,7 +60,8 @@
 		data() {
 			return {
 				active: 'tab-container1',
-				list:''
+				list:'',
+				video:true,
 			};
 		},
 		created(){
@@ -72,31 +90,9 @@
 </script>
 
 <style lang="css" scoped>
-	ul,li{
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.content-titlepic{
+		width:100%;
+		height: auto;
 	}
 
-	.titlepic{
-		width:100px;
-		height:100px;
-	}
-	.titlepic img{
-		width:100px;
-		height:100px;
-	}
-	.item {
-		display: inline-block;
-	}
-
-	.nav {
-		padding: 10px;
-	}
-
-	.link {
-		color: inherit;
-		padding: 20px;
-		display: block;
-	}
 </style>

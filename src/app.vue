@@ -5,7 +5,9 @@
             <mt-header fixed title=""></mt-header>
         </div>
         <!--/--头部-->
-
+        <!--<div v-on:click="check()" class="click">-->
+            <!--{{current}}nihao-->
+        <!--</div>-->
         <router-view></router-view>
 
         <!--底部-->
@@ -32,6 +34,7 @@
             </router-link>
         </nav>
         <!--/--底部-->
+
     </div>
 </template>
 
@@ -39,7 +42,20 @@
     export default{
         data(){
             return {
-                dec:'vue项目一'
+                dec:'vue项目一',
+                list:[1,2,3],
+                idx:1,
+                current:''
+            }
+        },
+        methods:{
+        	check(){
+        		this.list.map(function (v,k) {
+        			console.log(this);
+                    if (k === this.idx){
+                    	this.current = v;
+                    }
+		        })
             }
         },
         component:{
