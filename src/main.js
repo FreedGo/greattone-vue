@@ -12,7 +12,8 @@ import mintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import muicss from '../statics/mui/css/mui.css';
 import '../statics/mui/css/icons-extra.css';
-import '../statics/js/rem.js'
+import '../statics/js/rem.js';
+import '../statics/less/main.less';
 //1.3. 导入vue文件
 import app from './app.vue';
 import home from './component/home/home.vue';
@@ -21,6 +22,7 @@ import shopCar from './component/shopCar/shopCar.vue';
 import search from './component/search/search.vue';
 import huodong from './component/huodong/huodong.vue';
 import guangchang from './component/guangchang/guang-list.vue'
+import login from './component/login/login.vue'
 
 
 
@@ -45,6 +47,7 @@ let router = new vueRouter({
 	    { name:'search',path:'/search',component:search},
 	    { name:'huodong',path:'/huodong',component:huodong},
 	    { name:'guangchang',path:'/guangchang',component:guangchang},
+	    { name:'login',path:'/login',component:login},
     ]
 })
 

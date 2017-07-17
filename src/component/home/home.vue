@@ -1,5 +1,8 @@
 <template>
     <div class="tmpl">
+        <div class="head-warp">
+            <mt-header fixed title="好琴声"></mt-header>
+        </div>
         <div class="swipe-warp">
             <swiper :lists="list"></swiper>
         </div>

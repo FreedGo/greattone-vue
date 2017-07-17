@@ -1,9 +1,9 @@
 <template>
     <div class="app">
         <!--头部-->
-        <div class="head-warp">
-            <mt-header fixed title=""></mt-header>
-        </div>
+        <!--<div class="head-warp">-->
+            <!--<mt-header fixed title=""></mt-header>-->
+        <!--</div>-->
         <!--/--头部-->
         <!--<div v-on:click="check()" class="click">-->
             <!--{{current}}nihao-->
@@ -20,7 +20,7 @@
                 <span class="mui-icon mui-icon-compose"></span>
                 <span class="mui-tab-label">我要发帖</span>
             </router-link>
-            <router-link class="mui-tab-item" to="/shopCar">
+            <router-link class="mui-tab-item" to="/login">
                 <span class="mui-icon mui-icon-contact"></span>
                 <span class="mui-tab-label">个人中心</span>
             </router-link>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+
     export default{
         data(){
             return {
@@ -59,7 +60,6 @@
             }
         },
         component:{
-
         }
     }
 </script>
